@@ -48,8 +48,8 @@ NSString * const AWSMTLBooleanValueTransformerName = @"AWSMTLBooleanValueTransfo
 #pragma mark Customizable Transformers
 
 + (NSValueTransformer *)awsmtl_JSONDictionaryTransformerWithModelClass:(Class)modelClass {
-	NSParameterAssert([modelClass isSubclassOfClass:AWSMTLModel.class]);
-	NSParameterAssert([modelClass conformsToProtocol:@protocol(AWSMTLJSONSerializing)]);
+	//NSParameterAssert([modelClass isSubclassOfClass:AWSMTLModel.class]);
+	//NSParameterAssert([modelClass conformsToProtocol:@protocol(AWSMTLJSONSerializing)]);
 
 	return [AWSMTLValueTransformer
 		reversibleTransformerWithForwardBlock:^ id (id JSONDictionary) {
@@ -62,8 +62,8 @@ NSString * const AWSMTLBooleanValueTransformerName = @"AWSMTLBooleanValueTransfo
 		reverseBlock:^ id (id model) {
 			if (model == nil) return nil;
 
-			NSAssert([model isKindOfClass:AWSMTLModel.class], @"Expected a MTLModel object, got %@", model);
-			NSAssert([model conformsToProtocol:@protocol(AWSMTLJSONSerializing)], @"Expected a model object conforming to <MTLJSONSerializing>, got %@", model);
+			//NSAssert([model isKindOfClass:AWSMTLModel.class], @"Expected a MTLModel object, got %@", model);
+			//NSAssert([model conformsToProtocol:@protocol(AWSMTLJSONSerializing)], @"Expected a model object conforming to <MTLJSONSerializing>, got %@", model);
 
 			return [AWSMTLJSONAdapter JSONDictionaryFromModel:model];
 		}];
