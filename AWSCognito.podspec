@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                      :tag => s.version}
   s.requires_arc = true
   s.library      = 'sqlite3' 
-  s.dependency 'AWSCore', :git => "https://github.com/vysotsky/aws-sdk-ios.git"
+  s.dependency 'AWSCore'
   s.source_files = 'AWSCognito/*.{h,m}', 'AWSCognito/**/*.{h,m}'
   s.public_header_files = 'AWSCognito/*.h', 'AWSCognito/CognitoSync/*.h'
   s.private_header_files = 'AWSCognito/Fabric/*.h', 'AWSCognito/Internal/*.h'
